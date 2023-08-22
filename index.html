@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Теоретичне питання</h1>
+
+  <dl style="padding: 20px; margin: 0;">
+    <dh style="font-size: 25px;">Поясніть своїми словами, як ви розумієте, що таке деструктуризація і навіщо вона потрібна?</dh>
+    <dd style="margin-top: 20px; padding-right: 100px; font-size: 20px; line-height: 30px; text-align: justify;">Деструктуризація - це механізм за допомогою якого можна розгортати дані. Тобто при розгортанні обєкта в змінну, яка буде відповідати назві ключа запишиться значення ключа, а при розгортанні масиву в змінні запишуться значення масиву в тому порядку в якому вони зазначені в масиві. При деструктуризації зручно також використовувати значення по дефолту, у випадку якщо ці дані будуть відсутні. Також Деструктуризація допомагає переприсвоїти значення не використовуючи додаткових змінних. <br>   Деструктуризація робить роботу більш простою і зменшує кількість помилок, які можна зробити при написанні коду, робить код більш читабельним. 
+      <pre style="font-size: 14px;">Приклад використання деструктуризації обєктів:
+        const user1 = {
+          name: "John",
+          years: 30
+        };
+        const {name, years=33} = user1;
+      </pre>
+      <pre style="font-size: 14px;">Приклад використання деструктуризації масивів:
+        const array = ['value', 'showValue'];
+        const [value, showValue] = array;
+      </pre>
+      <pre style="font-size: 14px;">Приклад переприсвоєння значення:
+        let value = "value";
+        let showValue = "showValue";
+       [value, showValue] = [showValue, value];
+      </pre>
+    
+    </dd>
+  </dl>
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>
